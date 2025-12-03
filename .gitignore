@@ -1,0 +1,7 @@
+# n8n local DB and credentials
+.n8n/
+*.sqlite
+.env
+credentials/
+node_modules/
+.DS_Store
