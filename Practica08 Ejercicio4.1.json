@@ -1,0 +1,73 @@
+{
+  "name": "Practica08Ejercicio4.1",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -176,
+        -16
+      ],
+      "id": "47a7d48d-99a0-42f2-8a9a-742edd851741",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "schema": {
+          "__rl": true,
+          "value": "public",
+          "mode": "list",
+          "cachedResultName": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "migrations",
+          "mode": "list",
+          "cachedResultName": "migrations"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        32,
+        -16
+      ],
+      "id": "2c0234d0-5795-4709-9041-0b7e4d140ebc",
+      "name": "Select rows from a table",
+      "credentials": {
+        "postgres": {
+          "id": "gCQqTexBY43yQC0o",
+          "name": "Postgres account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Select rows from a table",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "dbaad7be-f38b-46dd-9a88-6c313d277003",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d0cc1c95f9926d593cd70d14ccf2d8543194fbd9cd3fe621cbd11fa2c5d19fa8"
+  },
+  "id": "4laVTIar9QEARrP4",
+  "tags": []
+}
